@@ -20,7 +20,6 @@ def odd_range(num1, num2):
             break
     return nums
 
-
 # Part B. has_lower_case
 # Define a function has_lower_case(s) that takes a string s
 # and checks if string s contains a lower case char.
@@ -29,9 +28,11 @@ def odd_range(num1, num2):
 def has_lower_case(s):
     # YOUR CODE HERE
 
-    return
+    for element in s:
+        if ord('a') <= ord(element) <= ord('z'):
+            return True
 
-
+    return False
 # Part C. fizz_buzz
 # Define a function fizz_buzz(num) that takes an integer num
 # and returns a string based on the following criteria:
