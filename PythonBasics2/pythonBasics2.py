@@ -47,5 +47,7 @@ def longest_consecutive_repeating_char(s):
 # and ignore spaces (i.e. case insensitive).
 def is_palindrome(s):
   # YOUR CODE HERE
+  s = s.replace(" ", "");
+  s = s.lower()
 
-  return
+  return s == s[::-1]
