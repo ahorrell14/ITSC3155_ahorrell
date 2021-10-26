@@ -47,10 +47,11 @@ def new_note():
 
     print('request method is', request.method)
     if request.method == 'POST':
-        return '<h1> POST method used for this request </h1>'
+        request_data = request.form
+        return f"data: {request_data} !"
     else:
         return render_template("new.html", user = a_user)
-    
+
 app.run(host=os.getenv('IP', '127.0.0.1'),port=int(os.getenv('PORT', 5000)),debug=True)
 
 # To see the web page in your web browser, go to the url,
